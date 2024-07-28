@@ -17,10 +17,10 @@ app.get('/', (req, res) => {
     res.send('Mail Notification Service');
 });
 
-// Init mailgun
+// Initialize mailgun
 const mg = mailgun.client({username: 'api', key:process.env.MAILGUN_API_KEY});
 
-// Init SES
+// Initialize SES
 const ses = new AWS.SES({
     accessKeyId: process.env.SES_ACCESS_KEY,
     secretAccessKey: process.env.SES_SECRET_KEY,
